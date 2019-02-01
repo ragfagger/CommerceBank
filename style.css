@@ -1,0 +1,57 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: linen;
+}
+
+#container {
+  text-align: center;
+  display: block;
+}
+
+#button-grid {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+.button {
+  width: 220px;
+  height: 135px;
+  cursor: pointer;
+  background: #ffffcc;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+button.disabled {
+  opacity: 0.5;
+}
+
+.button:hover {
+  background: #f4f776;
+  transition: background 0.2s ease-in-out;
+}
+
+#list-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#continue {
+  padding: 5px 20px;
+}
+
+#topics {
+  list-style: none;
+}

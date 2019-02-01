@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div id="container">
+        <div id="button-grid">
+          <button v-on:click="addToTopics" class="button">
+            Checking Account
+          </button>
+          <button v-on:click="addToTopics" class="button">
+            Savings Account
+          </button>
+          <button v-on:click="addToTopics" class="button">
+            CDs/Money Market Accounts
+          </button>
+          <button v-on:click="addToTopics" class="button">
+            Student Banking
+          </button>
+          <button v-on:click="addToTopics" class="button">Auto Loans</button>
+          <button v-on:click="addToTopics" class="button">Home Equity</button>
+          <button v-on:click="addToTopics" class="button">Mortgage</button>
+          <button v-on:click="addToTopics" class="button">Student Loans</button>
+          <button v-on:click="addToTopics" class="button">
+            Saving for Retirement
+          </button>
+          <button v-on:click="addToTopics" class="button">
+            Investment Account
+          </button>
+          <button v-on:click="addToTopics" class="button">Credit Card</button>
+          <button v-on:click="addToTopics" class="button">Other</button>
+        </div>
+      </div>
+      <div id="list-container">
+        <button id="continue">Continue</button>
+        <ul id="topics">
+          <li v-for="topic in topics">{{ topic }}</li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
