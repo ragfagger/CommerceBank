@@ -44,27 +44,14 @@ body {
   background: rgb(255, 255, 204);
   font-weight: bold;
   font-size: 14px;
+  padding: 15px;
   border: 1px solid rgb(223, 215, 215);
 }
 
 .button-selected {
-  width: 210px;
-  height: 145px;
-  cursor: pointer;
   background: rgb(4, 147, 114);
   color: white;
-  font-weight: bold;
-  font-size: 14px;
   border: 1px inset rgb(223, 215, 215);
-}
-
-.button-icon {
-  width: 60px;
-  margin: auto;
-}
-
-.button-icon-selected {
-  filter: invert(100%);
 }
 
 button:active,
@@ -97,8 +84,4 @@ button:focus {
 
 #continue:hover {
   cursor: pointer;
-}
-
-#selected-topics {
-  list-style-type: none;
 }
