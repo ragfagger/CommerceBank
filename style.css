@@ -20,6 +20,11 @@ body {
   padding: 20px;
 }
 
+#text-choose {
+  margin-top: 10px;
+  text-align: center;
+}
+
 #container {
   text-align: center;
   margin-top: 12px;
@@ -47,6 +52,7 @@ body {
   height: 145px;
   cursor: pointer;
   background: rgb(4, 147, 114);
+  color: white;
   font-weight: bold;
   font-size: 14px;
   border: 1px inset rgb(223, 215, 215);
@@ -57,6 +63,10 @@ body {
   margin: auto;
 }
 
+.button-icon-selected {
+  filter: invert(100%);
+}
+
 button:active,
 button:focus {
   outline: none;
@@ -65,6 +75,15 @@ button:focus {
 .button:hover {
   background: rgb(254, 241, 96);
   transition: background 0.2s ease-in-out;
+}
+
+#note-container {
+  margin-top: 15px;
+}
+
+#note {
+  display: block;
+  margin: auto;
 }
 
 #continue-container {
@@ -78,4 +97,8 @@ button:focus {
 
 #continue:hover {
   cursor: pointer;
+}
+
+#selected-topics {
+  list-style-type: none;
 }
