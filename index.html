@@ -6,6 +6,7 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
+    <title>Commerce Bank</title>
   </head>
   <body>
     <div id="app">
@@ -13,42 +14,113 @@
       <div id="info-bar">What can we help you with?</div>
       <div id="container">
         <div id="button-grid">
-          <button v-on:click="addToTopics" class="button">
+          <button
+            @click="topics[0].isSelected = !topics[0].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[0].isSelected }"
+          >
             <img src="icon_checking_account.png" class="button-icon" />
             <br />
             Checking Account
           </button>
-          <button v-on:click="addToTopics" class="button">
+          <button
+            @click="topics[1].isSelected = !topics[1].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[1].isSelected }"
+          >
             <img src="icon_savings_account.png" class="button-icon" />
             <br />
             Savings Account
           </button>
-          <button v-on:click="addToTopics" class="button">
+          <button
+            @click="topics[2].isSelected = !topics[2].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[2].isSelected }"
+          >
             CDs/Money Market Accounts
           </button>
-          <button v-on:click="addToTopics" class="button">
+          <button
+            @click="topics[3].isSelected = !topics[3].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[3].isSelected }"
+          >
             Student Banking
           </button>
-          <button v-on:click="addToTopics" class="button">Auto Loans</button>
-          <button v-on:click="addToTopics" class="button">Home Equity</button>
-          <button v-on:click="addToTopics" class="button">Mortgage</button>
-          <button v-on:click="addToTopics" class="button">Student Loans</button>
-          <button v-on:click="addToTopics" class="button">
+          <button
+            @click="topics[4].isSelected = !topics[4].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[4].isSelected }"
+          >
+            Auto Loans
+          </button>
+          <button
+            @click="topics[5].isSelected = !topics[5].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[5].isSelected }"
+          >
+            Home Equity
+          </button>
+          <button
+            @click="topics[6].isSelected = !topics[6].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[6].isSelected }"
+          >
+            Mortgage
+          </button>
+          <button
+            @click="topics[7].isSelected = !topics[7].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[7].isSelected }"
+          >
+            Student Loans
+          </button>
+          <button
+            @click="topics[8].isSelected = !topics[8].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[8].isSelected }"
+          >
             Saving for Retirement
           </button>
-          <button v-on:click="addToTopics" class="button">
+          <button
+            @click="topics[9].isSelected = !topics[9].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[9].isSelected }"
+          >
             Investment Account
           </button>
-          <button v-on:click="addToTopics" class="button">Credit Card</button>
-          <button v-on:click="addToTopics" class="button">Other</button>
+          <button
+            @click="topics[10].isSelected = !topics[10].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[10].isSelected }"
+          >
+            Credit Card
+          </button>
+          <button
+            @click="topics[11].isSelected = !topics[11].isSelected"
+            class="button"
+            :class="{ 'button-selected': topics[11].isSelected }"
+          >
+            Other
+          </button>
         </div>
       </div>
-      <div id="list-container">
+      <div id="continue-container">
         <button id="continue">Continue</button>
-        <ul id="topics">
-          <li v-for="topic in topics">{{ topic }}</li>
-        </ul>
       </div>
+      <ul id="selected-topics">
+        <li v-if="topics[0].isSelected">Checking Account</li>
+        <li v-if="topics[1].isSelected">Savings Account</li>
+        <li v-if="topics[2].isSelected">CDs/Money Market Accounts</li>
+        <li v-if="topics[3].isSelected">Student Banking</li>
+        <li v-if="topics[4].isSelected">Auto Loans</li>
+        <li v-if="topics[5].isSelected">Home Equity</li>
+        <li v-if="topics[6].isSelected">Mortgage</li>
+        <li v-if="topics[7].isSelected">Student Loans</li>
+        <li v-if="topics[8].isSelected">Saving for Retirement</li>
+        <li v-if="topics[9].isSelected">Investment Account</li>
+        <li v-if="topics[10].isSelected">Credit Card</li>
+        <li v-if="topics[11].isSelected">Other</li>
+      </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./main.js"></script>

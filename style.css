@@ -42,6 +42,16 @@ body {
   border: 1px solid rgb(223, 215, 215);
 }
 
+.button-selected {
+  width: 210px;
+  height: 145px;
+  cursor: pointer;
+  background: rgb(4, 147, 114);
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px inset rgb(223, 215, 215);
+}
+
 .button-icon {
   width: 60px;
   margin: auto;
@@ -52,16 +62,12 @@ button:focus {
   outline: none;
 }
 
-button.disabled {
-  opacity: 0.5;
-}
-
 .button:hover {
   background: rgb(254, 241, 96);
   transition: background 0.2s ease-in-out;
 }
 
-#list-container {
+#continue-container {
   margin-top: 15px;
   text-align: center;
 }
@@ -70,6 +76,6 @@ button.disabled {
   padding: 5px 20px;
 }
 
-#topics {
-  list-style: none;
+#continue:hover {
+  cursor: pointer;
 }
