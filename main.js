@@ -1,6 +1,11 @@
 var app = new Vue({
   el: "#app",
   data: {
+    step: 1,
+    stepInfo: [
+      "What can we help you with?",
+      "Which location works best for you?"
+    ],
     topics: [
       {
         topicName: "Checking Account",

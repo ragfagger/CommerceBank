@@ -6,25 +6,26 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
     <title>Commerce Bank</title>
   </head>
   <body>
     <div id="app">
       <div id="title-bar">Schedule an appointment.</div>
-      <div id="info-bar">What can we help you with?</div>
+      <div id="info-bar">{{ stepInfo[step - 1] }}</div>
       <div id="text-choose">Choose as many topics as you need.</div>
       <div id="container">
-        <div id="button-grid">
+        <div id="button-grid"
+             v-if="step === 1">
           <button
             @click="topics[0].isSelected = !topics[0].isSelected"
             class="button"
             :class="{ 'button-selected': topics[0].isSelected }"
           >
-            <img
-              src="icon_checking_account.png"
-              class="button-icon"
-              :class="{ 'button-icon-selected': topics[0].isSelected }"
-            />
+            <i class="fas fa-money-check-alt fa-3x"></i>
             <br />
             Checking Account
           </button>
@@ -33,11 +34,7 @@
             class="button"
             :class="{ 'button-selected': topics[1].isSelected }"
           >
-            <img
-              src="icon_savings_account.png"
-              class="button-icon"
-              :class="{ 'button-icon-selected': topics[1].isSelected }"
-            />
+            <i class="fas fa-piggy-bank fa-3x"></i>
             <br />
             Savings Account
           </button>
@@ -46,6 +43,8 @@
             class="button"
             :class="{ 'button-selected': topics[2].isSelected }"
           >
+            <i class="fas fa-business-time fa-3x"></i>
+            <br />
             CDs/Money Market Accounts
           </button>
           <button
@@ -53,6 +52,8 @@
             class="button"
             :class="{ 'button-selected': topics[3].isSelected }"
           >
+            <i class="fas fa-school fa-3x"></i>
+            <br />
             Student Banking
           </button>
           <button
@@ -60,6 +61,8 @@
             class="button"
             :class="{ 'button-selected': topics[4].isSelected }"
           >
+            <i class="fas fa-car-side fa-3x"></i>
+            <br />
             Auto Loans
           </button>
           <button
@@ -67,6 +70,8 @@
             class="button"
             :class="{ 'button-selected': topics[5].isSelected }"
           >
+            <i class="fas fa-dollar-sign fa-3x"></i>
+            <br />
             Home Equity
           </button>
           <button
@@ -74,6 +79,8 @@
             class="button"
             :class="{ 'button-selected': topics[6].isSelected }"
           >
+            <i class="fas fa-home fa-3x"></i>
+            <br />
             Mortgage
           </button>
           <button
@@ -81,6 +88,8 @@
             class="button"
             :class="{ 'button-selected': topics[7].isSelected }"
           >
+            <i class="fas fa-graduation-cap fa-3x"></i>
+            <br />
             Student Loans
           </button>
           <button
@@ -88,6 +97,8 @@
             class="button"
             :class="{ 'button-selected': topics[8].isSelected }"
           >
+            <i class="fas fa-leaf fa-3x"></i>
+            <br />
             Saving for Retirement
           </button>
           <button
@@ -95,6 +106,8 @@
             class="button"
             :class="{ 'button-selected': topics[9].isSelected }"
           >
+          <i class="fas fa-briefcase fa-3x"></i>
+          <br />
             Investment Account
           </button>
           <button
@@ -102,6 +115,8 @@
             class="button"
             :class="{ 'button-selected': topics[10].isSelected }"
           >
+            <i class="far fa-credit-card fa-3x"></i>
+            <br />
             Credit Card
           </button>
           <button
@@ -109,6 +124,8 @@
             class="button"
             :class="{ 'button-selected': topics[11].isSelected }"
           >
+            <i class="far fa-folder-open fa-3x"></i>
+            <br />
             Other
           </button>
         </div>
@@ -117,7 +134,10 @@
         <textarea id="note">Add a note</textarea>
       </div>
       <div id="continue-container">
-        <button id="continue">Continue</button>
+        <button id="continue"
+                @click="step++">Continue</button>
+      </div>
+      <div>{{ step }}</div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./main.js"></script>
   </body>
