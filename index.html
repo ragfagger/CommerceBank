@@ -12,6 +12,7 @@
     <div id="app">
       <div id="title-bar">Schedule an appointment.</div>
       <div id="info-bar">What can we help you with?</div>
+      <div id="text-choose">Choose as many topics as you need.</div>
       <div id="container">
         <div id="button-grid">
           <button
@@ -19,7 +20,11 @@
             class="button"
             :class="{ 'button-selected': topics[0].isSelected }"
           >
-            <img src="icon_checking_account.png" class="button-icon" />
+            <img
+              src="icon_checking_account.png"
+              class="button-icon"
+              :class="{ 'button-icon-selected': topics[0].isSelected }"
+            />
             <br />
             Checking Account
           </button>
@@ -28,7 +33,11 @@
             class="button"
             :class="{ 'button-selected': topics[1].isSelected }"
           >
-            <img src="icon_savings_account.png" class="button-icon" />
+            <img
+              src="icon_savings_account.png"
+              class="button-icon"
+              :class="{ 'button-icon-selected': topics[1].isSelected }"
+            />
             <br />
             Savings Account
           </button>
@@ -104,24 +113,11 @@
           </button>
         </div>
       </div>
+      <div id="note-container">
+        <textarea id="note">Add a note</textarea>
+      </div>
       <div id="continue-container">
         <button id="continue">Continue</button>
-      </div>
-      <ul id="selected-topics">
-        <li v-if="topics[0].isSelected">Checking Account</li>
-        <li v-if="topics[1].isSelected">Savings Account</li>
-        <li v-if="topics[2].isSelected">CDs/Money Market Accounts</li>
-        <li v-if="topics[3].isSelected">Student Banking</li>
-        <li v-if="topics[4].isSelected">Auto Loans</li>
-        <li v-if="topics[5].isSelected">Home Equity</li>
-        <li v-if="topics[6].isSelected">Mortgage</li>
-        <li v-if="topics[7].isSelected">Student Loans</li>
-        <li v-if="topics[8].isSelected">Saving for Retirement</li>
-        <li v-if="topics[9].isSelected">Investment Account</li>
-        <li v-if="topics[10].isSelected">Credit Card</li>
-        <li v-if="topics[11].isSelected">Other</li>
-      </ul>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./main.js"></script>
   </body>
