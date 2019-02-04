@@ -1,11 +1,16 @@
 var app = new Vue({
+  /* el is for element. This Vue instance will apply to the element with the id of
+  "app" in the HTML file */
   el: "#app",
   data: {
+    /* Step is the current step of the appointment setting process */
     step: 1,
+    /* stepInfo will be display in the info bar at step */
     stepInfo: [
       "What can we help you with?",
       "Which location works best for you?"
     ],
+    /* Store button selection state for each button */
     topics: [
       {
         topicName: "Checking Account",

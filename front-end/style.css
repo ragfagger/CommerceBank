@@ -1,7 +1,15 @@
+/*
+This is CSS. This gives the HTML file instructions on how to be formatted. "#item"
+corresponds to the id of an HTML element and ".item" corresponds to the class of
+an HTML element. Multiple elements can have the same class.
+*/
+
+/* Applies to all elements */
 * {
   font-family: "Roboto", sans-serif;
 }
 
+/* Elements can be referred to with the tag name, class, or id */
 body {
   margin: 0;
 }
@@ -54,6 +62,7 @@ body {
   border: 1px inset rgb(223, 215, 215);
 }
 
+/* Applies when the button is either active or focused */
 button:active,
 button:focus {
   outline: none;
