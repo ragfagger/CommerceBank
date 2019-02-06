@@ -7,44 +7,44 @@
     Vue expressions. The corresponding value within main.js will be displayed in
     its place-->
     <div class="info-bar">{{ stepInfo[step - 1] }}</div>
-    <div class="text-choose">Choose as many topics as you need.</div>
     <div class="container">
-      <!-- This div element contains the grid of topic buttons -->
-      <div class="button-grid">
-        <!-- :topic is short for v-bind:topic, this binds the topic prop to what is
-        in quotes-->
-        <Button :topic="buttonData[0].topic" :icon="buttonData[0].icon"></Button>
-        <Button :topic="buttonData[1].topic" :icon="buttonData[1].icon"></Button>
-        <Button :topic="buttonData[2].topic" :icon="buttonData[2].icon"></Button>
-        <Button :topic="buttonData[3].topic" :icon="buttonData[3].icon"></Button>
-        <Button :topic="buttonData[4].topic" :icon="buttonData[4].icon"></Button>
-        <Button :topic="buttonData[5].topic" :icon="buttonData[5].icon"></Button>
-        <Button :topic="buttonData[6].topic" :icon="buttonData[6].icon"></Button>
-        <Button :topic="buttonData[7].topic" :icon="buttonData[7].icon"></Button>
-        <Button :topic="buttonData[8].topic" :icon="buttonData[8].icon"></Button>
-        <Button :topic="buttonData[9].topic" :icon="buttonData[9].icon"></Button>
-        <Button :topic="buttonData[10].topic" :icon="buttonData[10].icon"></Button>
-        <Button :topic="buttonData[11].topic" :icon="buttonData[11].icon"></Button>
-      </div>
+      <!-- the v-show directive will only display the element when the given condition is
+      true-->
+      <div class="text-choose" v-show="step === 1">Choose as many topics as you need.</div>
+      <Step1 v-show="step === 1"></Step1>
+      <Step2 v-show="step === 2"></Step2>
+      <Step3 v-show="step === 3"></Step3>
+      <Step4 v-show="step === 4"></Step4>
+      <Step5 v-show="step === 5"></Step5>
     </div>
-    <div class="note-container">
+    <div class="note-container" v-show="step === 1">
       <!-- This is the textarea which allows adding any notes that the user may
       wants to include-->
       <textarea class="note">Add a note</textarea>
     </div>
     <div class="continue-container">
-      <button class="continue">Continue</button>
+      <!-- @click is shorthand for v-on:click. This is an event handler. The
+      incrementStep function will be called when the button is clicked.-->
+      <button class="continue" @click="incrementStep">Continue</button>
     </div>
   </div>
 </template>
 
 <script>
-import Button from "./components/Button.vue";
+import Step1 from "./components/Step1.vue";
+import Step2 from "./components/Step2.vue";
+import Step3 from "./components/Step3.vue";
+import Step4 from "./components/Step4.vue";
+import Step5 from "./components/Step5.vue";
 
 export default {
   name: "app",
   components: {
-    Button
+    Step1,
+    Step2,
+    Step3,
+    Step4,
+    Step5
   },
   data() {
     return {
@@ -57,28 +57,15 @@ export default {
         "Let's find a time that works for you.",
         "Now we just need a few more details.",
         "Here's your appointment:"
-      ],
-      buttonData: [
-        { topic: "Checking Account", icon: "fas fa-money-check-alt fa-3x" },
-        { topic: "Savings Account", icon: "fas fa-piggy-bank fa-3x" },
-        {
-          topic: "CDs/Money Market Accounts",
-          icon: "fas fa-business-time fa-3x"
-        },
-        { topic: "Student Banking", icon: "fas fa-school fa-3x" },
-        { topic: "Auto Loans", icon: "fas fa-car-side fa-3x" },
-        { topic: "Home Equity", icon: "fas fa-dollar-sign fa-3x" },
-        { topic: "Mortgage", icon: "fas fa-home fa-3x" },
-        { topic: "Student Loans", icon: "fas fa-graduation-cap fa-3x" },
-        {
-          topic: "Saving for Retirement",
-          icon: "fas fa-leaf fa-3x"
-        },
-        { topic: "Investment Account", icon: "fas fa-briefcase fa-3x" },
-        { topic: "Credit Card", icon: "fas fa-credit-card fa-3x" },
-        { topic: "Other", icon: "fas fa-folder-open fa-3x" }
       ]
     };
+  },
+  methods: {
+    incrementStep: function() {
+      if (this.step < 5) {
+        this.step++;
+      }
+    }
   }
 };
 </script>
@@ -110,11 +97,12 @@ body {
 .info-bar {
   background-color: rgb(41, 241, 195);
   text-align: center;
+  font-weight: bold;
   padding: 20px;
 }
 
 .text-choose {
-  margin-top: 10px;
+  margin: 10px;
   text-align: center;
 }
 
