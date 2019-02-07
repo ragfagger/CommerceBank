@@ -52,7 +52,7 @@ export default {
       step: 1,
       /* stepInfo will be displayed in the info bar for each step */
       stepInfo: [
-        "What can we help you with fool?",
+        "What can we help you with?",
         "Which location works best for you?",
         "Let's find a time that works for you.",
         "Now we just need a few more details.",
