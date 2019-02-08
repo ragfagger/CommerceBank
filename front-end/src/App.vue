@@ -10,7 +10,6 @@
     <div class="container">
       <!-- the v-show directive will only display the element when the given condition is
       true-->
-      <div class="text-choose" v-show="step === 1">Choose as many topics as you need.</div>
       <Step1 v-show="step === 1"></Step1>
       <Step2 v-show="step === 2"></Step2>
       <Step3 v-show="step === 3"></Step3>
@@ -99,18 +98,6 @@ body {
   text-align: center;
   font-weight: bold;
   padding: 20px;
-}
-
-.text-choose {
-  margin: 10px;
-  text-align: center;
-}
-
-.button-grid {
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-row-gap: 12px;
-  grid-column-gap: 12px;
 }
 
 .container {

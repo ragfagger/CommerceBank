@@ -1,19 +1,16 @@
 <template>
-  <div class="button-grid">
-    <!-- :topic is short for v-bind:topic, this binds the topic prop to what is
-    in quotes-->
-    <Button :topic="buttonData[0].topic" :icon="buttonData[0].icon"></Button>
-    <Button :topic="buttonData[1].topic" :icon="buttonData[1].icon"></Button>
-    <Button :topic="buttonData[2].topic" :icon="buttonData[2].icon"></Button>
-    <Button :topic="buttonData[3].topic" :icon="buttonData[3].icon"></Button>
-    <Button :topic="buttonData[4].topic" :icon="buttonData[4].icon"></Button>
-    <Button :topic="buttonData[5].topic" :icon="buttonData[5].icon"></Button>
-    <Button :topic="buttonData[6].topic" :icon="buttonData[6].icon"></Button>
-    <Button :topic="buttonData[7].topic" :icon="buttonData[7].icon"></Button>
-    <Button :topic="buttonData[8].topic" :icon="buttonData[8].icon"></Button>
-    <Button :topic="buttonData[9].topic" :icon="buttonData[9].icon"></Button>
-    <Button :topic="buttonData[10].topic" :icon="buttonData[10].icon"></Button>
-    <Button :topic="buttonData[11].topic" :icon="buttonData[11].icon"></Button>
+  <div>
+    <div class="text-choose" v-show="step === 1">Choose as many topics as you need.</div>
+    <div class="button-grid">
+      <!-- :topic is short for v-bind:topic, this binds the topic prop to what is
+      in quotes-->
+      <Button
+        v-for="button in buttonData"
+        :key="button.topic"
+        :topic="button.topic"
+        :icon="button.icon"
+      ></Button>
+    </div>
   </div>
 </template>
 
@@ -50,3 +47,17 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.text-choose {
+  margin: 10px;
+  text-align: center;
+}
+
+.button-grid {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 12px;
+  grid-column-gap: 12px;
+}
+</style>
