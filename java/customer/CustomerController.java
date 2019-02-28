@@ -45,8 +45,11 @@ class CustomerController {
 
 		return repository.findById(id)
 				.map(Customer -> {
-					Customer.setName(newCustomer.getName());
-					Customer.setRole(newCustomer.getRole());
+					Customer.setFirstName(newCustomer.getFirstName());
+					Customer.setLastName(newCustomer.getLastName());
+					Customer.setEmail(newCustomer.getEmail());
+					Customer.setPhoneNumber(newCustomer.getPhoneNumber());
+					Customer.setOnMailingList(newCustomer.getOnMailingList());
 					return repository.save(Customer);
 				})
 				.orElseGet(() -> {
