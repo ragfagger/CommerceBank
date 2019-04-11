@@ -1,0 +1,51 @@
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('18700 East 39th St S', 'Independence', 'Missouri', 64057, , , , , , , , , , , , 1);
+
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('301 SE', Lee''s Summit', 'Missouri', 64063, , , , , , , , , , , , 1);
+
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('11405 Nall Ave', 'Leawood', 'Kansas', 66211, , , , , , , , , , , , 1);
+
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('8700 Monrovia', 'Lenexa', 'Kansas', 64215, , , , , , , , , , , , 1);
+
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('4020 Rainbow Blvd', 'Kansas City', 'Kansas', 66103, , , , , , , , , , , , 1);
+
+--
+
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('18700 East 39th St S', 'Independence', 'Missouri', 64057, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1);
+
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('301 SE', Lee''s Summit', 'Missouri', 64063, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1);
+
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('11405 Nall Ave', 'Leawood', 'Kansas', 66211, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('8700 Monrovia', 'Lenexa', 'Kansas', 64215, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('4020 Rainbow Blvd', 'Kansas City', 'Kansas', 66103, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1);
