@@ -30,13 +30,12 @@ class Appointment {
 
 	    Appointment() {}
 
-	    Appointment(int ApptTime, int ApptDate, Boolean CheckingWanted, Boolean SavingsWanted,
+	    Appointment(Timestamp datetime, Boolean CheckingWanted, Boolean SavingsWanted,
 	    			Boolean CDsMoneyMarketWanted, Boolean StudentBankingWanted, Boolean AutoLoansWanted,
 	    			Boolean HomeEquityWanted, Boolean MortgageWanted, Boolean StudentLoansWanted,
 	    			Boolean RetirementWanted, Boolean InvestmentWanted, Boolean CreditCardWanted,
 	    			Boolean OtherWanted, String note) {
-	        this.ApptTime = ApptTime;
-		    this.ApptDate = ApptDate;
+	        this.datetime = datetime;
 		    this.CheckingWanted = CheckingWanted;
 		    this.SavingsWanted = SavingsWanted;
 		    this.CDsMoneyMarketWanted = CDsMoneyMarketWanted;
