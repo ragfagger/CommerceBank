@@ -4,6 +4,7 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.sql.Timestamp;
 
 @Data
 @Entity
@@ -12,15 +13,13 @@ class AppointmentInfo {
 		private @Id @GeneratedValue Long ApptId;
 	    private @Id @GeneratedValue Long UserId;
 	    private @Id @GeneratedValue Long BranchId;
-	    private int ApptTime; //subject to change
-	    private int ApptDate; //subject to change
+	    private Timestamp datetime;
 	    private String note;
 
 	    AppointmentInfo() {}
 
-	    AppointmentInfo(int ApptTime, int ApptDate, String note) {
-        this.ApptTime = ApptTime;
-	    this.ApptDate = ApptDate;
+	    AppointmentInfo(Timestamp datetime, String note) {
+        this.datetime = datetime;
 	    this.note = note;
     }
 	}
