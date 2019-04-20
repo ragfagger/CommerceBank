@@ -1,15 +1,16 @@
-package Branch;
+package com.example.customeronlytest;
 
-import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Data
-@Entity
-class Branch {
 
-	    private @Id @GeneratedValue Long BranchId;
+@Entity
+public class Branch{
+
+	    private @Id @GeneratedValue(strategy= GenerationType.IDENTITY) Long Branch_Id;
 	    private String Street; //subject to change
 	    private String City; //subject to change
 		private String State;
@@ -27,7 +28,9 @@ class Branch {
 	    private Boolean CreditCardCovered;
 	    private Boolean OtherCovered;
 
-	    Branch() {}
+	    Branch() {
+	    	
+		}
 
 	    Branch(String Street, String City, String State, int Zip, Boolean CheckingCovered, Boolean SavingsCovered,
 	    			Boolean CDsMoneyMarketCovered, Boolean StudentBankingCovered, Boolean AutoLoansCovered,
@@ -51,5 +54,141 @@ class Branch {
 		    this.CreditCardCovered = CreditCardCovered;
 		    this.OtherCovered = OtherCovered;
 	    }
+
+	public Long getBranch_Id() {
+		return Branch_Id;
 	}
+
+	public void setBranch_Id(Long branch_Id) {
+		Branch_Id = branch_Id;
+	}
+
+	public String getStreet() {
+		return Street;
+	}
+
+	public void setStreet(String street) {
+		Street = street;
+	}
+
+	public String getCity() {
+		return City;
+	}
+
+	public void setCity(String city) {
+		City = city;
+	}
+
+	public String getState() {
+		return State;
+	}
+
+	public void setState(String state) {
+		State = state;
+	}
+
+	public int getZip() {
+		return Zip;
+	}
+
+	public void setZip(int zip) {
+		Zip = zip;
+	}
+
+	public Boolean getStudentLoansCovered() {
+		return StudentLoansCovered;
+	}
+
+	public void setStudentLoansCovered(Boolean studentLoansCovered) {
+		StudentLoansCovered = studentLoansCovered;
+	}
+
+	public Boolean getCheckingCovered() {
+		return CheckingCovered;
+	}
+
+	public void setCheckingCovered(Boolean checkingCovered) {
+		CheckingCovered = checkingCovered;
+	}
+
+	public Boolean getSavingsCovered() {
+		return SavingsCovered;
+	}
+
+	public void setSavingsCovered(Boolean savingsCovered) {
+		SavingsCovered = savingsCovered;
+	}
+
+	public Boolean getCDsMoneyMarketCovered() {
+		return CDsMoneyMarketCovered;
+	}
+
+	public void setCDsMoneyMarketCovered(Boolean CDsMoneyMarketCovered) {
+		this.CDsMoneyMarketCovered = CDsMoneyMarketCovered;
+	}
+
+	public Boolean getStudentBankingCovered() {
+		return StudentBankingCovered;
+	}
+
+	public void setStudentBankingCovered(Boolean studentBankingCovered) {
+		StudentBankingCovered = studentBankingCovered;
+	}
+
+	public Boolean getAutoLoansCovered() {
+		return AutoLoansCovered;
+	}
+
+	public void setAutoLoansCovered(Boolean autoLoansCovered) {
+		AutoLoansCovered = autoLoansCovered;
+	}
+
+	public Boolean getHomeEquityCovered() {
+		return HomeEquityCovered;
+	}
+
+	public void setHomeEquityCovered(Boolean homeEquityCovered) {
+		HomeEquityCovered = homeEquityCovered;
+	}
+
+	public Boolean getMortgageCovered() {
+		return MortgageCovered;
+	}
+
+	public void setMortgageCovered(Boolean mortgageCovered) {
+		MortgageCovered = mortgageCovered;
+	}
+
+	public Boolean getRetirementCovered() {
+		return RetirementCovered;
+	}
+
+	public void setRetirementCovered(Boolean retirementCovered) {
+		RetirementCovered = retirementCovered;
+	}
+
+	public Boolean getInvestmentCovered() {
+		return InvestmentCovered;
+	}
+
+	public void setInvestmentCovered(Boolean investmentCovered) {
+		InvestmentCovered = investmentCovered;
+	}
+
+	public Boolean getCreditCardCovered() {
+		return CreditCardCovered;
+	}
+
+	public void setCreditCardCovered(Boolean creditCardCovered) {
+		CreditCardCovered = creditCardCovered;
+	}
+
+	public Boolean getOtherCovered() {
+		return OtherCovered;
+	}
+
+	public void setOtherCovered(Boolean otherCovered) {
+		OtherCovered = otherCovered;
+	}
+}
 

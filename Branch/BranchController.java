@@ -1,16 +1,11 @@
-package Branch;
+package com.example.customeronlytest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
+@Controller
 class BranchController {
 	
 	private final BranchRepository repository;
@@ -45,25 +40,28 @@ class BranchController {
 
 		return repository.findById(id)
 				.map(Branch -> {
-					Branch.setApptTime(newBranch.getApptTime());
-				    Branch.setApptDate(newBranch.getApptDate());
-				    Branch.setCheckingWanted(newBranch.getCheckingWanted());
-				    Branch.setSavingsWanted(newBranch.getSavingsWanted());
-				    Branch.setCDsMoneyMarketWanted(newBranch.getCDsMoneyMarketWanted());
-				    Branch.setStudentBankingWanted(newBranch.getStudentBankingWanted());
-				    Branch.setAutoLoansWanted(newBranch.getAutoLoansWanted());
-				    Branch.setHomeEquityWanted(newBranch.getHomeEquityWanted());
-				    Branch.setMortgageWanted(newBranch.getMortgageWanted());
-				    Branch.setStudentLoansWanted(newBranch.getStudentLoansWanted());
-				    Branch.setRetirementWanted(newBranch.getRetirementWanted());
-				    Branch.setInvestmentWanted(newBranch.getInvestmentWanted());
-				    Branch.setCreditCardWanted(newBranch.getCreditCardWanted());
-				    Branch.setOtherWanted(newBranch.getOtherWanted());
-				    Branch.setNote(newBranch.getNote());
+					Branch.setBranch_Id(newBranch.getBranch_Id());
+				    Branch.setStreet(newBranch.getStreet());
+				    Branch.setCity(newBranch.getCity());
+				    Branch.setState(newBranch.getState());
+				    Branch.setZip(newBranch.getZip());
+				    Branch.setStudentLoansCovered(newBranch.getStudentLoansCovered());
+				    Branch.setCheckingCovered(newBranch.getCheckingCovered());
+					Branch.setSavingsCovered(newBranch.getSavingsCovered());
+					Branch.setCDsMoneyMarketCovered(newBranch.getCDsMoneyMarketCovered());
+					Branch.setStudentBankingCovered(newBranch.getStudentBankingCovered());
+					Branch.setAutoLoansCovered(newBranch.getAutoLoansCovered());
+				    Branch.setHomeEquityCovered(newBranch.getHomeEquityCovered());
+				    Branch.setMortgageCovered(newBranch.getMortgageCovered());
+				    Branch.setStudentLoansCovered(newBranch.getStudentLoansCovered());
+				    Branch.setRetirementCovered(newBranch.getRetirementCovered());
+				    Branch.setInvestmentCovered(newBranch.getInvestmentCovered());
+				    Branch.setCreditCardCovered(newBranch.getCreditCardCovered());
+				    Branch.setOtherCovered(newBranch.getOtherCovered());
 					return repository.save(Branch);
 				})
 				.orElseGet(() -> {
-					newBranch.setId(id);
+					newBranch.setBranch_Id(id);
 					return repository.save(newBranch);
 				});
 	}
