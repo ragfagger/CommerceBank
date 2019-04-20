@@ -1,13 +1,13 @@
 package com.example.customeronlytest;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 class BranchController {
-	
+	@Autowired
 	private final BranchRepository repository;
 
 	BranchController(BranchRepository repository) {
