@@ -1,4 +1,4 @@
-package customer;
+package com.example.customeronlytest;
 
  class CustomerNotFoundException extends RuntimeException {
 

@@ -1,9 +1,9 @@
-package customer;
+package com.example.customeronlytest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SprintBootApplication
+@SpringBootApplication
 public class CustomerApplication {
 
 	public static void main(String... args) {
