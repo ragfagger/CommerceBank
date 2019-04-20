@@ -1,4 +1,4 @@
-# commerce-bank
+# front-end
 
 ## Project setup
 ```
