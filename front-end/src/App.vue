@@ -46,7 +46,8 @@ export default {
         "Let's find a time that works for you.",
         "Now we just need a few more details.",
         "Here's your appointment:"
-      ]
+      ],
+      selectedTopics: []
     };
   },
   methods: {

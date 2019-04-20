@@ -1,10 +1,10 @@
 <template>
   <div>
-    <p>firstName lastName,</p>
+    <p>{ firstName } { lastName },</p>
     <p>Your appointment is scheduled. We'll see you soon!</p>
-    <p>branchAddress</p>
-    <p>appointmentDateTime</p>
-    <p>topics</p>
+    <p>{ branchAddress }</p>
+    <p>{ appointmentDateTime }</p>
+    <p>{ topics }</p>
     <button>Change Appointment</button>
     <button>Cancel Appointment</button>
   </div>
