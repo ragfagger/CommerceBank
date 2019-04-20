@@ -24,7 +24,7 @@ CREATE TABLE Customer
     PRIMARY KEY(User_ID)
 );
 
-CREATE TABLE Branches
+CREATE TABLE Branch
 (
     Branch_ID int NOT NULL AUTO_INCREMENT,
     Street VARCHAR(255),
