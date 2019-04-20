@@ -1,5 +1,13 @@
 <template>
-  <div>STEP 5</div>
+  <div>
+    <p>firstName lastName,</p>
+    <p>Your appointment is scheduled. We'll see you soon!</p>
+    <p>branchAddress</p>
+    <p>appointmentDateTime</p>
+    <p>topics</p>
+    <button>Change Appointment</button>
+    <button>Cancel Appointment</button>
+  </div>
 </template>
 
 <script>
@@ -9,7 +17,8 @@ export default {
 </script>
 
 <style scoped>
-div {
-  font-size: 200px;
+button {
+  padding: 5px 20px;
+  margin: 5px 5px;
 }
 </style>

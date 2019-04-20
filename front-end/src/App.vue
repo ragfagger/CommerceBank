@@ -1,30 +1,22 @@
 <template>
-  <!-- This is the core content. The Vue instance is tied to this element since it
-  has the "app" id-->
   <div id="app">
     <div class="title-bar">Schedule an appointment.</div>
-    <!-- Displays current step number. The curly braces {{ }} are used for
-    Vue expressions. The corresponding value within main.js will be displayed in
-    its place-->
     <div class="info-bar">{{ stepInfo[step - 1] }}</div>
+    <div class="left-margin">
+      <span class="circle">{{ step }}</span>
+    </div>
     <div class="container">
-      <!-- the v-show directive will only display the element when the given condition is
-      true-->
-      <Step1 v-show="step === 1"></Step1>
-      <Step2 v-show="step === 2"></Step2>
-      <Step3 v-show="step === 3"></Step3>
-      <Step4 v-show="step === 4"></Step4>
-      <Step5 v-show="step === 5"></Step5>
+      <Step1 v-if="step === 1"></Step1>
+      <Step2 v-if="step === 2"></Step2>
+      <Step3 v-if="step === 3"></Step3>
+      <Step4 v-if="step === 4"></Step4>
+      <Step5 v-if="step === 5"></Step5>
     </div>
     <div class="note-container" v-show="step === 1">
-      <!-- This is the textarea which allows adding any notes that the user may
-      wants to include-->
       <textarea class="note">Add a note</textarea>
     </div>
     <div class="continue-container">
-      <!-- @click is shorthand for v-on:click. This is an event handler. The
-      incrementStep function will be called when the button is clicked.-->
-      <button class="continue" @click="incrementStep">Continue</button>
+      <button v-if="step != 5" class="continue" @click="incrementStep">Continue</button>
     </div>
   </div>
 </template>
@@ -47,9 +39,7 @@ export default {
   },
   data() {
     return {
-      /* Step is the current step of the appointment setting process */
       step: 1,
-      /* stepInfo will be displayed in the info bar for each step */
       stepInfo: [
         "What can we help you with?",
         "Which location works best for you?",
@@ -69,9 +59,6 @@ export default {
 };
 </script>
 
-<!-- This is CSS. This gives the HTML file instructions on how to be formatted. "#item"
-corresponds to the id of an HTML element and ".item" corresponds to the class of
-an HTML element. Multiple elements can have the same class. -->
 <style>
 body {
   margin: 0;
@@ -121,9 +108,17 @@ body {
 
 .continue {
   padding: 5px 20px;
+  margin-bottom: 15px;
 }
 
 .continue:hover {
   cursor: pointer;
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: rgb(42, 187, 155);
+  padding: 50px 55px;
+  margin: 250px;
 }
 </style>

@@ -1,13 +1,7 @@
-<!-- This is a component. Components are reusable items that can be passed props
--->
-
 <template>
   <div class="button-container">
     <button @click="isSelected = !isSelected" :class="{ selected: isSelected }">
-      <!-- These i tags add icons -->
       <i :class="icon"></i>
-      <!-- br inserts a break. This allows the image and text to display on top
-      of eachother-->
       <br>
       {{ topic }}
     </button>
@@ -16,8 +10,7 @@
 
 <script>
 export default {
-  name: "Button",
-  /* Props are passed to the component when used in App.vue */
+  name: "TopicButton",
   props: ["topic", "icon"],
   data() {
     return {
@@ -27,7 +20,6 @@ export default {
 };
 </script>
 
-<!-- Scoped style only applies to this component -->
 <style scoped>
 button {
   width: 210px;
@@ -40,7 +32,6 @@ button {
   border: 1px solid rgb(223, 215, 215);
 }
 
-/* Applies when the button is either active or focused */
 button:active,
 button:focus {
   outline: none;

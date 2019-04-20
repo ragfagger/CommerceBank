@@ -1,25 +1,23 @@
 <template>
   <div>
-    <div class="text-choose" v-show="step === 1">Choose as many topics as you need.</div>
+    <div class="text-choose">Choose as many topics as you need.</div>
     <div class="button-grid">
-      <!-- :topic is short for v-bind:topic, this binds the topic prop to what is
-      in quotes-->
-      <Button
+      <TopicButton
         v-for="button in buttonData"
         :key="button.topic"
         :topic="button.topic"
         :icon="button.icon"
-      ></Button>
+      ></TopicButton>
     </div>
   </div>
 </template>
 
 <script>
-import Button from "./Button.vue";
+import TopicButton from "./TopicButton.vue";
 export default {
   name: "Step1",
   components: {
-    Button
+    TopicButton
   },
   data() {
     return {
