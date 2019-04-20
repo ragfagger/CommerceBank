@@ -13,7 +13,7 @@ CREATE TABLE Appointments
     FOREIGN KEY (Branch_ID) REFERENCES branches(Branch_ID)
 );
 
-CREATE TABLE User_Information
+CREATE TABLE Customer
 (
     User_ID int NOT NULL AUTO_INCREMENT,
     First_Name VARCHAR(255),
