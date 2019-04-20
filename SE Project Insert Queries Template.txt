@@ -3,7 +3,7 @@ INSERT INTO Branches
 VALUES
 ('', '', '', , , , , , , , , , , , , );
 
-INSERT INTO User_Information
+INSERT INTO Customer
 (First_Name, Last_Name, Email, Phone_Number, On_Mailing_List)
 VALUES
 ('', '', '', , );
