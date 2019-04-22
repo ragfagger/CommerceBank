@@ -30,6 +30,10 @@ button {
   padding: 5px 20px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 img {
   margin-top: 15px;
 }
