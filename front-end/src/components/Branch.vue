@@ -20,7 +20,7 @@ export default {
   methods: {
     getInfo: function() {
       this.$http
-        .get("https://ron-swanson-quotes.herokuapp.com/v2/quotes")
+        .get("localhost/branches")
         .then(result => {
           this.info = result.data[0];
         });
