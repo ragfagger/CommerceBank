@@ -1,0 +1,14 @@
+INSERT INTO Branches
+(Street, City, State, Zip, Checking_Covered, Savings_Covered, CDs_Money_Market_Covered, Student_Banking_Covered, Auto_Loans_Covered, Home_Equity_Covered, Mortgage_Covered, Student_Loans_Covered, Retirement_Covered, Investment_Covered, Credit_Card_Covered, Other_Covered)
+VALUES
+('', '', '', , , , , , , , , , , , , );
+
+INSERT INTO Customer
+(First_Name, Last_Name, Email, Phone_Number, On_Mailing_List)
+VALUES
+('', '', '', , );
+
+INSERT INTO Appointments
+(Appt_Date, Checking_Wanted, Savings_Wanted, CDs_Money_Market_Wanted, Student_Banking_Wanted, Auto_Loans_Wanted, Home_Equity_Wanted, Mortgage_Wanted, Student_Loans_Wanted, Retirement_Wanted, Investment_Wanted, Credit_Card_Wanted, Other_Wanted)
+VALUES
+('', , , , , , , , , , , , );

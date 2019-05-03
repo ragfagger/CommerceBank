@@ -1,0 +1,39 @@
+CREATE TABLE Appointments
+(
+    Appt_ID int NOT NULL AUTO_INCREMENT,
+    User_ID int NOT NULL,
+    Branch_ID int NOT NULL,
+    Appt_Date DATETIME NOT NULL,
+    Checking_Wanted BOOLEAN, Savings_Wanted BOOLEAN, CDs_Money_Market_Wanted BOOLEAN,
+    Student_Banking_Wanted BOOLEAN, Auto_Loans_Wanted BOOLEAN, Home_Equity_Wanted BOOLEAN,
+    Mortgage_Wanted BOOLEAN, Student_Loans_Wanted BOOLEAN, Retirement_Wanted BOOLEAN,
+    Investment_Wanted BOOLEAN, Credit_Card_Wanted BOOLEAN, Other_Wanted BOOLEAN,
+    PRIMARY KEY (Appt_ID),
+    FOREIGN KEY (User_ID) REFERENCES user_information(User_ID),
+    FOREIGN KEY (Branch_ID) REFERENCES branches(Branch_ID)
+);
+
+CREATE TABLE Customer
+(
+    User_ID int NOT NULL AUTO_INCREMENT,
+    First_Name VARCHAR(255),
+    Last_Name VARCHAR(255),
+    Email VARCHAR(255),
+    Phone_Number int,
+    On_Mailing_List BOOLEAN,
+    PRIMARY KEY(User_ID)
+);
+
+CREATE TABLE Branch
+(
+    Branch_ID int NOT NULL AUTO_INCREMENT,
+    Street VARCHAR(255),
+    City VARCHAR(255),
+    State VARCHAR(255),
+    Zip int,
+    Checking_Covered BOOLEAN, Savings_Covered BOOLEAN, CDs_Money_Market_Covered BOOLEAN,
+    Student_Banking_Covered BOOLEAN, Auto_Loans_Covered BOOLEAN, Home_Equity_Covered BOOLEAN,
+    Mortgage_Covered BOOLEAN, Student_Loans_Covered BOOLEAN, Retirement_Covered BOOLEAN,
+    Investment_Covered BOOLEAN, Credit_Card_Covered BOOLEAN, Other_Covered BOOLEAN,
+    PRIMARY KEY(Branch_ID)
+);
